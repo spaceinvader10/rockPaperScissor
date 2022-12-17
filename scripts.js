@@ -6,6 +6,9 @@ let computerWin;
 let target = 'Player Wins!';
 let playerScore = 0;
 let computerScore = 0;
+let game = 5;
+
+//game function should called the playround function and determine the amount of rounds needed for the game, need to integrate into its own function later
 
 
 function playerSelection () {
@@ -49,7 +52,7 @@ Have the player choose a choice also from the array
 
 function playRound(playerSelection, computerSelection){
 
-    while (gameRecord.length < 5){
+    while (gameRecord.length < game){
         //while the rounds are less than five keep playing until there are 5 rounds
         // console.log(gameRecord);
          playerWin = playerSelection();
@@ -103,3 +106,4 @@ function playRound(playerSelection, computerSelection){
 
 playRound(playerSelection,computerSelection);
 //logic for rock paper scissors
+
