@@ -1,6 +1,56 @@
-.playButton {
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+button {
+    border: 0px;
+    padding: 0px;
+}
+/* .playButton {
     height: 100px;
     width: 100px;
     color: rgb(91, 23, 250);
     border:2px solid;
+} */
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    background-color: black;
+    color: white;
+    gap: 20px;
+    
+}
+
+h3, #userStats, #computerStats {
+    display: flex;
+    justify-content: center;
+    align-self:center;
+    
+} 
+
+#choices {
+    display:flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 0px;
+    margin: 0px;
+    
+}
+div.title {
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 50px;
+    color: black;
+}
+
+img {
+    display: block;
+    height: 200px;
+    width:  200px;
+    padding: 0px;
+    gap: 20px;
+    
 }

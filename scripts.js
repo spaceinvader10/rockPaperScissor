@@ -121,7 +121,7 @@ function playRound(player){
 
         console.log('Round '+ (gameRecord.length) + ' Player: ' + playerScore + ' : Computer: ' + computerScore +'.');
         document.getElementById('userStats').innerHTML = 'Player Score : ' + playerScore + '!';
-         document.getElementById('computerStats').innerHTML = 'Computer Score : ' + computerScore + '!';
+        document.getElementById('computerStats').innerHTML = 'Computer Score : ' + computerScore + '!';
 
    // }
 
@@ -131,10 +131,15 @@ function playRound(player){
     
  //   console.log(gameRecord.length)
     console.log( playerScore > computerScore ? 'Player has won the game!': 'Computer has won the game!');
-  
-    if(playerScore === 5 || computerScore === 5){
+  //need to build logic for the live feed
+    if(playerScore > 3){
         console.log('Best 3 out of 5. Game is done!')
-        return ;
+        document.getElementById('liveFeed').innerHTML = 'The winner is the Player : ' + playerScore + ' !';
+      
+        // else if(computerScore > playerScore){
+        //     document.getElementsByTagName('h3').textContent = 'The winner is the Computer: ' + computerScore + ' !';
+        // }
+        
     }
 
 }
