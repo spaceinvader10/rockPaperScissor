@@ -7,13 +7,36 @@ let target = 'Player Wins!';
 let playerScore = 0;
 let computerScore = 0;
 let game = 5;
+let bsign = 'nonfate';
+
 
 //game function should called the playround function and determine the amount of rounds needed for the game, need to integrate into its own function later
+let rock = document.getElementById('playRock');
+let paper = document.getElementById('playPaper');
+let scissor = document.getElementById('playScissor');
+
+rock.addEventListener('click', function(){
+    console.log('rock was selected ');
+    bsign = 'rock';
+    return playRound(playerSelection(bsign));
+})
+paper.addEventListener('click', function(){
+    console.log('paper was selected ');
+    bsign = 'paper';
+    return playRound(playerSelection(bsign));
+})
+
+scissor.addEventListener('click', ()=>{
+    console.log('scissor was selected ');
+    bsign = 'scissor';
+    return playRound(playerSelection(bsign));
+})
+
+  //  return sign = 'rock';)
+//console.log(bsign)
 
 
-function playerSelection () {
-
-    let sign = prompt("Choose Rock, Paper, or Scissor to proceed! A total of five round will be played!");
+function playerSelection(sign) {
         //want to see the user's response
         if(sign.toLowerCase() === 'rock'|| sign.toLowerCase() ==='paper' || sign.toLowerCase() ==='scissor') {
             playerSign = sign;
@@ -50,12 +73,20 @@ Have the player choose a choice also from the array
 
 //compare the results of the player vs the computer and determine the winner
 
-function playRound(playerSelection, computerSelection){
+function playRound(player){
 
-    while (gameRecord.length < game){
+    if(player === undefined){
+        console.log('failed player choice');
+        return null;
+    }
+
+   // if (gameRecord.length < game){
+
+
+    
         //while the rounds are less than five keep playing until there are 5 rounds
         // console.log(gameRecord);
-         playerWin = playerSelection();
+         playerWin = player;
          computerWin = computerSelection();
         //loop needs to happen here or else infinite stuck, call the computerSelection and player Selection here
         
@@ -89,8 +120,10 @@ function playRound(playerSelection, computerSelection){
         }
 
         console.log('Round '+ (gameRecord.length) + ' Player: ' + playerScore + ' : Computer: ' + computerScore +'.');
+        document.getElementById('userStats').innerHTML = 'Player Score : ' + playerScore + '!';
+         document.getElementById('computerStats').innerHTML = 'Computer Score : ' + computerScore + '!';
 
-    }
+   // }
 
 // intergrated game logic into the if else
    
@@ -99,11 +132,14 @@ function playRound(playerSelection, computerSelection){
  //   console.log(gameRecord.length)
     console.log( playerScore > computerScore ? 'Player has won the game!': 'Computer has won the game!');
   
-    
+    if(playerScore === 5 || computerScore === 5){
+        console.log('Best 3 out of 5. Game is done!')
+        return ;
+    }
 
 }
 
 
-playRound(playerSelection,computerSelection);
+console.log(playerSelection(bsign))
 //logic for rock paper scissors
 
