@@ -140,7 +140,8 @@ function playRound(player){
        
         userStat.innerHTML= 'Player Score: ' + playerScore;
         computerStat.innerHTML= 'Computer Score: ' + computerScore;
-        roundStat.innerHTML = 'Round: '+ gameRecord.length + '&nbsp' + ' Player: ' + playerScore + ' : Computer: ' + computerScore +'.';
+        roundStat.innerHTML = 'Round: '+ gameRecord.length;
+        // + '&nbsp' + ' Player: ' + playerScore + ' : Computer: ' + computerScore +'.'
 
 
    // }
@@ -155,6 +156,7 @@ function playRound(player){
     if(playerScore >= game && (playerScore > computerScore)){
         outcome.innerHTML ='Best ' + game + ' out of ' + (game + 2) +' Game is done!';
         liveFeeder.innerHTML = 'The winner is the Player : ' + playerScore + ' !';
+        liveFeeder.classList.add('colorMe2')
       
         // else if(computerScore > playerScore){
         //     document.getElementsByTagName('h3').textContent = 'The winner is the Computer: ' + computerScore + ' !';
@@ -164,7 +166,7 @@ function playRound(player){
     if(computerScore >= game && (playerScore < computerScore)){
         outcome.innerHTML ='Best '+ game +' out of ' + (game + 2) + ' Game is done!';
         liveFeeder.innerHTML = 'The winner is the Computer : ' + computerScore + ' !';
-
+        liveFeeder.classList.add('colorMe')
         
     }
 

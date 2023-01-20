@@ -14,6 +14,16 @@ button {
     color: rgb(91, 23, 250);
     border:2px solid;
 } */
+
+.colorMe {
+    background-color: #ff0000;
+
+}
+
+.colorMe2{
+    background-color: #33ff00;
+    
+}
 #scoreboard {
     display: flex;
     flex-direction: column;
