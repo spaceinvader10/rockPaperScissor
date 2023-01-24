@@ -21,6 +21,16 @@ let scissor = document.getElementById('playScissor');
 let userStat = document.getElementById('userStats');
 let computerStat = document.getElementById('computerStats');
 let roundStat =  document.getElementById('round');
+let playBtn = document.getElementById('playButton');
+let scoreboard = document.getElementById('scoreboard');
+let choices = document.getElementById('choices');
+
+playBtn.addEventListener('click', ()=> {
+    scoreboard.classList.remove('hider');
+    choices.classList.remove('hider');
+    playBtn.classList.add('remover');
+
+})
 
 rock.addEventListener('click', ()=>{
     liveFeeder2.innerHTML= 'Player has selected rock.'

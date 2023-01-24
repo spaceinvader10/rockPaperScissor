@@ -9,21 +9,27 @@
 </head>
 <body>
     <!-- <button class="playButton">Play!</button> -->
-    <div id='scoreboard'>
-        <h3 id="liveFeed">Just click one of the buttons to start the game!</h3>
-        <h3 id="liveFeed2">Ties do not count per round!</h3>
-        <h3 id="matchOutcome">Be the first to reach majority to win!</h3>
+    <div id='scoreboard' class='hider'>
+        <h3 id='liveFeed'>Just click one of the buttons to start the game!</h3>
+        <h3 id='liveFeed2'>Ties do not count per round!</h3>
+        <h3 id='matchOutcome'>Be the first to reach majority to win!</h3>
         <h4 id ='round'> Round: </h4>
-        <div id="userStats"> Player Score: </div>
-        <div id="computerStats"> Computer Score: </div>
+        <div id='userStats'> Player Score: </div>
+        <div id='computerStats'> Computer Score: </div>
 
     </div>
+    <div id="btn-container">
+        <div id="playButton">
+        </div>
+    </div>
 
-    <div id="choices">
+    
+    <div id="choices" class='hider'>
         <button id ='playRock'><div class='title'>Rock</div><img src="imgs/rock.jpg" alt="rock" id="'rockPic"> </button>
-        <button id="playPaper"><div class='title'>Paper</div> <img src="imgs/paper.jpg" alt="paper" id="'paperPic"> </button>
-        <button id="playScissor"><div class='title'>Scissor</div> <img src="imgs/scissor.jpg" alt="scissor" id="'scissorPic"> </button>
+        <button id='playPaper'><div class='title'>Paper</div> <img src="imgs/paper.jpg" alt="paper" id="'paperPic"> </button>
+        <button id='playScissor'><div class='title'>Scissor</div> <img src="imgs/scissor.jpg" alt="scissor" id="'scissorPic"> </button>
     </div>
+
 
     
     <script src="scripts.js">
